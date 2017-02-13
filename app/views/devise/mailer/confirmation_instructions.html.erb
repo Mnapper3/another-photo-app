@@ -3,8 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
+    <style>
+         .button {
+              background-color: red;  
+              border-radius: 5px;
+              color: white;
+              padding: .5em;
+              text-decoration: none;
+              display:block;
+        }
+         .button:focus,
+         .button:hover {
+              background-color: DarkGreen;
+        }
+    </style
 <body> 
 
 <%= t('.greeting', recipient: @resource.email, default: "Welcome #{@resource.email}!") %>
