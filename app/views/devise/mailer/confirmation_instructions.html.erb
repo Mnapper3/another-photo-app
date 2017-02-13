@@ -7,7 +7,13 @@
 </head>
 <body> 
 
-<p><%= link_to t('.action', default: 'Confirm my account'), confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale), class: "btn btn-primary" %></p>
+<%= t('.greeting', recipient: @resource.email, default: "Welcome #{@resource.email}!") %>
+
+<%= t('.instruction', default: 'You can confirm your account email through the link below:') %>
+
+<%= link_to t('.action', default: 'Confirm my account'), confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale), class: "btn btn-primary" %>
 
 </body>
 </html>
+
+
