@@ -4,29 +4,26 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0">
 </head>
-    <style>
-         .button {
-              background-color: red;  
-              border-radius: 5px;
-              color: white;
-              padding: .5em;
-              text-decoration: none;
-              display:block;
-        }
-         .button:focus,
-         .button:hover {
-              background-color: DarkGreen;
-        }
-    </style
-<body> 
+<style>
+     .button {
+          background-color: red;  
+          border-radius: 5px;
+          color: white;
+          padding: .5em;
+          text-decoration: none;
+          display:block;
+    }
+     .button:focus,
+     .button:hover {
+          background-color: DarkGreen;
+    }
+</style
 
 <%= t('.greeting', recipient: @resource.email, default: "Welcome #{@resource.email}!") %>
 
 <%= t('.instruction', default: 'You can confirm your account email through the link below:') %>
 
-<%= link_to t('.action', default: 'Confirm my account'), confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale), class: "btn btn-primary" %>
+<%= link_to t('.action', default: 'Confirm my account'), confirmation_url(@resource, confirmation_token: @token, locale: I18n.locale), class: "button" %>
 
-</body>
-</html>
 
 
