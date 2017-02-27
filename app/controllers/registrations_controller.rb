@@ -1,6 +1,8 @@
 class RegistrationsController < Devise::RegistrationsController
 
-    def create
+    def create.
+    
+        
 
         build_resource(sign_up_params)
         
